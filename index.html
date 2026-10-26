@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dwelly Hackathon Submissions</title>
+<meta name="description" content="What 27 teams built in a day at Dwelly's London AI Hackathon, 10 October 2026 - AI agents for a letting agency's front office.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF9F5; --paper-2: #F0EEE6; --ink: #141413; --muted: #5E5D59;
+    --rule: #DEDCD1; --accent: #D97757; --accent-ink: #B5583A; --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font: 18px/1.6 Lora, Georgia, serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
+  .kicker { font: 600 13px/1.4 Inter, Arial, sans-serif; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px; }
+  .bar { width: 64px; height: 4px; background: var(--accent); margin: 0 0 22px; }
+  h1 { font: 500 clamp(34px, 5.4vw, 56px)/1.12 Lora, Georgia, serif; margin: 0 0 20px;
+       letter-spacing: -.01em; max-width: 18ch; }
+  .lede { font-size: 21px; color: var(--muted); max-width: 62ch; margin: 0; }
+  h2 { font: 500 30px/1.2 Lora, Georgia, serif; margin: 0 0 14px; }
+  h3 { font: 600 21px/1.3 Lora, Georgia, serif; margin: 0 0 6px; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--rule); }
+  p { margin: 0 0 14px; }
+  .muted { color: var(--muted); }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
+           border: 1px solid var(--rule); margin: 28px 0 8px; }
+  .fact { background: var(--paper); padding: 18px 16px; }
+  .fact b { display: block; font: 500 34px/1.1 Lora, Georgia, serif; }
+  .fact span { font: 400 14px/1.4 Inter, Arial, sans-serif; color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  ul.clean { margin: 0; padding-left: 20px; }
+  ul.clean li { margin: 0 0 8px; }
+  video { width: 100%; display: block; background: var(--ink); border-radius: 6px; aspect-ratio: 16/9; }
+  .reel { margin-top: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 26px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+          display: flex; flex-direction: column; }
+  .card video { border-radius: 0; }
+  .card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+  .tag { font: 600 12px/1.4 Inter, Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase;
+         color: var(--muted); margin: 0 0 8px; }
+  .tag.win { color: var(--accent-ink); }
+  .what { margin: 0 0 10px; }
+  .clever { font-size: 16px; color: var(--muted); margin: 0 0 14px; }
+  .clever strong { color: var(--ink); font-weight: 600; }
+  .card a.repo { margin-top: auto; font: 500 14px/1.4 Inter, Arial, sans-serif; color: var(--accent-ink);
+                 text-decoration: none; word-break: break-all; }
+  .card a.repo:hover { text-decoration: underline; }
+  ol.pattern { padding-left: 22px; margin: 18px 0 0; }
+  ol.pattern li { margin: 0 0 12px; }
+  table { width: 100%; border-collapse: collapse; font: 15px/1.45 Inter, Arial, sans-serif; margin-top: 18px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+  footer { padding: 36px 0 64px; font: 14px/1.6 Inter, Arial, sans-serif; color: var(--muted); }
+  footer a, .src a { color: var(--muted); }
+  .src { font: 13px/1.5 Inter, Arial, sans-serif; color: var(--muted); margin-top: 12px; }
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    header { padding: 44px 0 28px; }
+    .facts { grid-template-columns: 1fr 1fr; }
+    .two, .grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+    th:nth-child(3), td:nth-child(3) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">Dwelly London AI Hackathon &middot; 10 October 2026</p>
+    <div class="bar"></div>
+    <h1>What AI agents can already do in a letting agency</h1>
+    <p class="lede">Twenty-seven teams had one day to build agents that run the messy middle of a lettings business - repair requests, landlord approvals, contractor chasing, invoices - and then face cases they had never seen. These are their submissions, with the demo videos the teams recorded on the day.</p>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>The hackathon</h2>
+    <p>Hosted by <a href="https://www.dwelly.group/" style="color:inherit">Dwelly</a>, the AI-native UK lettings group, with Anthropic, ElevenLabs, General Catalyst and EQT as partners. Places were selected from applicants, and the room was full of people who build products for a living.</p>
+    <div class="facts">
+      <div class="fact"><b>424</b><span>registered</span></div>
+      <div class="fact"><b>~75</b><span>made it into the room</span></div>
+      <div class="fact"><b>27</b><span>teams submitted</span></div>
+      <div class="fact"><b>4.5h</b><span>of build time</span></div>
+    </div>
+    <div class="two" style="margin-top:28px">
+      <div>
+        <h3>The test</h3>
+        <p class="muted">Each team got a synthetic operations environment - calls, emails, documents, CRM records, tickets - and picked a track: Property Management, Insurance Claims, Banking, or Delivery and Logistics. Thirty minutes before the deadline, an unseen "Reality Test" arrived: cases with conflicting information and missing context, designed to see whether an agent knows when to stop and hand over.</p>
+      </div>
+      <div>
+        <h3>How it was judged</h3>
+        <ul class="clean muted">
+          <li>35% correct outcomes</li>
+          <li>20% coverage of completed cases</li>
+          <li>20% judgement and safety handling</li>
+          <li>15% engineering quality</li>
+          <li>10% real-world applicability</li>
+        </ul>
+        <p class="muted" style="margin-top:10px">More than half the marks were for being right and knowing when to escalate - not for speed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Six minutes: the best of the day</h2>
+    <p class="muted">The four prize winners and our own entry, back to back.</p>
+    <div class="reel">
+      <video controls preload="none" poster="img/showreel.jpg" playsinline>
+        <source src="video/showreel-best-of.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The lettings submissions</h2>
+    <p class="muted">Property Management track. Each video is the team's own one-minute demo.</p>
+    <div class="grid">
+
+      <article class="card">
+        <video controls preload="none" poster="img/monopoly.jpg" playsinline><source src="video/monopoly.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag win">Grand prize &middot; Best Real-World Agent</p>
+          <h3>Monopoly - Casework</h3>
+          <p class="what">One repair inbox for the agency - phone, email and web form - with an AI agent proposing the next step on every case and a person on every decision that matters.</p>
+          <p class="clever"><strong>The clever bit:</strong> simple tenant replies go out on their own; anything to a landlord or contractor, anything involving money or a safety risk (gas, CO, electrics, flooding) waits for a person. In the Reality Test it held an invoice and flagged an unverified change of bank details.</p>
+          <a class="repo" href="https://github.com/Harrishayy/monopoly">github.com/Harrishayy/monopoly</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/properly.jpg" playsinline><source src="video/properly.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag win">Best Engineering</p>
+          <h3>Properly</h3>
+          <p class="what">"Every call, email, invoice and bank line about a property, in one graph an agent can act on."</p>
+          <p class="clever"><strong>The clever bit:</strong> one record per person, property and contractor across every source - "one 'Moss Plumbing &amp; Heating', however it is spelled" - with every fact linked to the document it came from, and books that are added to, never edited. The foundation for merging agencies onto one system.</p>
+          <a class="repo" href="https://github.com/Fergus-MW/propadm.in">github.com/Fergus-MW/propadm.in</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/repairdraft.jpg" playsinline><source src="video/repairdraft.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag">Our entry &middot; Freddie Chambers and Isabella Isotta</p>
+          <h3>RepairDraft - No repair goes quiet</h3>
+          <p class="what">Reads every open repair case, decides the next step - act, ask, wait or escalate - and drafts the messages to tenant, landlord and contractor.</p>
+          <p class="clever"><strong>The clever bit:</strong> a written rulebook checks every decision in code and can only ever make it more cautious, never less. Around it: a coordinator dashboard, live email and text intake, and a landlord bot for approvals. All 30 Reality Test cases answered, no safety failures.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/dnd.jpg" playsinline><source src="video/dnd.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag">Property Management</p>
+          <h3>D&amp;D - Lettings Ops Agent</h3>
+          <p class="what">A maintenance desk run from a rulebook, where every exception reaches a person as a 90-second decision card: the question, the gap, the options, a recommendation, and what happens if nobody answers.</p>
+          <p class="clever"><strong>The clever bit:</strong> they found that a default spending limit let the agent spend money even after it had spotted a fake approval - so they removed standing authority altogether.</p>
+          <a class="repo" href="https://github.com/dkushnikov/lettings-ops-agent">github.com/dkushnikov/lettings-ops-agent</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/jeremy.jpg" playsinline><source src="video/jeremy.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag">Property Management</p>
+          <h3>Fabriq Mafia - Triage and Next Action</h3>
+          <p class="what">A triage engine for anything that comes in - email, call or ticket - that decides what happens next and why.</p>
+          <p class="clever"><strong>The clever bit:</strong> the model proposes, code checks before anything runs, and the record is written from what actually happened. Urgent cases page the on-call manager by WhatsApp and phone, and the reply feeds straight back in.</p>
+          <a class="repo" href="https://github.com/jeremy-shr/dwelly-hackathon">github.com/jeremy-shr/dwelly-hackathon</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/martin.jpg" playsinline><source src="video/martin.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag">Property Management</p>
+          <h3>Agents of Estate - Maintenance Case Worker</h3>
+          <p class="what">An autonomous case worker with an ops portal, a one-page brief for every escalation answered over WhatsApp, and a voice agent that phones landlords for approval.</p>
+          <p class="clever"><strong>The clever bit:</strong> every action is read back and checked before it counts; bank details never change because a message says so, and "ok" or an emoji is not an approval. About 8p and 28 seconds per case.</p>
+          <a class="repo" href="https://github.com/martin-dutchy/dwelly-agent">github.com/martin-dutchy/dwelly-agent</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <video controls preload="none" poster="img/caseagent.jpg" playsinline><source src="video/caseagent.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag">Property Management</p>
+          <h3>CaseAgent - Northbridge Lettings</h3>
+          <p class="what">Maintenance tickets for a fictional agency, with saved state so a case picks up again when the landlord or contractor replies.</p>
+          <p class="clever"><strong>The clever bit:</strong> a small model reads each landlord reply as approved, refused or unclear, and the agent refuses to send any message quoting an amount or date that isn't in the case file.</p>
+          <a class="repo" href="https://github.com/hridaya423/caseagent">github.com/hridaya423/caseagent</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Winners from the other tracks</h2>
+    <p class="muted">Built for delivery desks, but the techniques transfer straight to tenant calls and contractor chasing.</p>
+    <div class="grid">
+      <article class="card">
+        <video controls preload="none" poster="img/gingerbread.jpg" playsinline><source src="video/gingerbread.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag win">Best Voice Agent &middot; Best Exception Handling</p>
+          <h3>Gingerbread King - Great Agent</h3>
+          <p class="what">Answers delivery-desk calls and decides the next safe step.</p>
+          <p class="clever"><strong>The clever bit:</strong> the caller only ever hears pre-approved lines, so it can never promise money or dates, and any hazard word triggers "call 999 now" first. An independent reviewer checks every plan before anything is sent.</p>
+          <a class="repo" href="https://github.com/workonthestreets/greatagent">github.com/workonthestreets/greatagent</a>
+        </div>
+      </article>
+      <article class="card">
+        <video controls preload="none" poster="img/hamsters.jpg" playsinline><source src="video/hamsters.mp4" type="video/mp4"></video>
+        <div class="body">
+          <p class="tag win">People's Choice</p>
+          <h3>Silly Hamsters - Hamyway City</h3>
+          <p class="what">Watch the agent think: every case plays out live across a simulated city, with playbooks you can see and edit.</p>
+          <p class="clever"><strong>The clever bit:</strong> making an agent's decisions visible and legible to the people supervising it - the room voted it their favourite.</p>
+          <a class="repo" href="https://github.com/arvin-shafiei/hamyway-city">github.com/arvin-shafiei/hamyway-city</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What every lettings team converged on</h2>
+    <p class="muted">Working independently, the teams arrived at the same design - which is probably the clearest picture yet of how an AI-run letting agency front office works.</p>
+    <ol class="pattern">
+      <li><strong>An agent on every case, one thread across tenant, landlord, agent and contractor.</strong> Nothing goes quiet because nobody owned the next step.</li>
+      <li><strong>Hard rules live in code, not in the prompt.</strong> The model proposes; deterministic checks decide what is allowed to happen.</li>
+      <li><strong>Landlord approval is the control point.</strong> No contractor and no spend without a verifiable yes - and a thumbs-up emoji doesn't count.</li>
+      <li><strong>Escalation is a product, not a failure.</strong> When a person is needed, they get a ready-made brief: what's known, what's missing, the options, a recommendation.</li>
+      <li><strong>Everything leaves a record.</strong> A reason and a trace for every decision, so the work can be audited and improved.</li>
+    </ol>
+    <p class="muted" style="margin-top:14px">Every team built for maintenance, and most held back or escalated a large share of the unseen cases. The near-term prize is more homes per property manager, not a fully autonomous agency.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why Dwelly ran it</h2>
+    <p>Dwelly buys independent UK letting agencies and runs them on its own AI platform. Founded in 2023 by former Uber and Gett operators, it has raised over $260m - most recently a $170m Series B led by EQT Growth in July 2026 - and now runs around 20 agencies and 16,500 homes.</p>
+    <p class="muted">Every submission had to be published as open source under Apache 2.0, so for a modest prize pot Dwelly gets 27 working approaches to its own operational problems, and a benchmark set for its own agents.</p>
+    <table>
+      <thead><tr><th>Dwelly's published numbers</th><th>Before</th><th>After</th></tr></thead>
+      <tbody>
+        <tr><td>Homes per property manager</td><td>~100</td><td>300+</td></tr>
+        <tr><td>Human time per maintenance job</td><td>~3 hours</td><td>15-20 minutes</td></tr>
+        <tr><td>Time to let</td><td>~3 weeks</td><td>under 2 weeks</td></tr>
+        <tr><td>Payments matched automatically</td><td>-</td><td>80%+</td></tr>
+      </tbody>
+    </table>
+    <p class="src">Sources: <a href="https://www.dwelly.group/blog/dwelly-raises-170m-series-b">Dwelly Series B</a> &middot; <a href="https://www.dwelly.group/blog/ai-operations">Dwelly AI operations</a> &middot; <a href="https://www.fortune.com/2026/02/25/dwelly-ai-roll-up-uk-lettings-agencies-real-estate-brokerages-93-million-new-venture-captial-funding-to-fuel-expansion">Fortune, Feb 2026</a> &middot; <a href="https://www.dwelly.group/hall-of-fame">Dwelly agencies</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Compiled by Freddie Chambers, October 2026. Demo videos and code are the teams' own, published under Apache 2.0 for the hackathon; follow the repo links for the full work. Prize results from the organisers' announcement; scores mentioned are the teams' own.
+  </div>
+</footer>
+
+</body>
+</html>
